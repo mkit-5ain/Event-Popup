@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta name="title" content="타이틀">
+	<meta name="description" content="내용">
+	<meta name="keywords" content="키워드">
+	<meta name="viewport" content="width=1080">
+	<title>팝업</title>
+	<script tpye="text/javscript" src="js/jquery-2.0.0.min.js"></script>
+	<script tpye="text/javscript" src="js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+<body>
+	<div id="main_wrap">
+		<button class="pop_on" onclick="layerPop(this ,false);">팝업</button>
+	</div>
+	<div class="layer_pop_widget">
+		<div class="layer_pop_bg"></div>
+		<div id="popup" class="pop_widget">
+			<div class="pop_contents">
+				<p class="contents_inner">팝업</p>
+				<p class="popup_btn"><button onclick="layerClose(this ,false);" type="button" id="close_btn" class="close_btn">X</button></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

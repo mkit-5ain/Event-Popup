@@ -1,0 +1,79 @@
+@charset "UTF-8";
+body {
+  margin: 0px;
+  position: relative; }
+  body button {
+    cursor: pointer; }
+  body button, body p {
+    margin: 0px; }
+
+/* 스크롤 */
+.pop_scroll {
+  overflow-y: scroll;
+  height: 100%;
+  scrollbar-face-color: #FFFFFF;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-3dlight-color: #FFFFFF;
+  scrollbar-shadow-color: #FFFFFF;
+  scrollbar-darkshadow-color: #FFFFFF;
+  scrollbar-track-color: #FFFFFF;
+  scrollbar-arrow-color: #FFFFFF; }
+
+.pop_scroll::-webkit-scrollbar {
+  width: 1px;
+  height: 1px; }
+
+.pop_scroll::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {
+  display: block;
+  height: 10px;
+  background: #fff; }
+
+.pop_scroll::-webkit-scrollbar-track {
+  background: #fff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 4px transparent; }
+
+.pop_scroll::-webkit-scrollbar-thumb {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 4px transparent; }
+
+/* 팝업 */
+body.default {
+  position: relative;
+  overflow: hidden; }
+
+.layer_pop_widget {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100; }
+  .layer_pop_widget .layer_pop_bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
+  .layer_pop_widget .pop_widget {
+    width: 92%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 200;
+    background-color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .layer_pop_widget .pop_widget .pop_contents {
+      text-align: center; }
+      .layer_pop_widget .pop_widget .pop_contents .popup_btn {
+        position: absolute;
+        top: 2%;
+        right: 2%; }

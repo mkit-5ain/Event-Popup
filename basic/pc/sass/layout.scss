@@ -1,0 +1,30 @@
+body{margin:0px; position:relative;
+	button{cursor:pointer;}
+	button,p{margin:0px;}
+}
+/* 스크롤 */
+.pop_scroll { overflow-y:scroll; height:100%;
+scrollbar-face-color:#FFFFFF;
+scrollbar-highlight-color: #FFFFFF;
+scrollbar-3dlight-color: #FFFFFF;
+scrollbar-shadow-color: #FFFFFF;
+scrollbar-darkshadow-color: #FFFFFF;
+scrollbar-track-color: #FFFFFF;
+scrollbar-arrow-color: #FFFFFF
+}
+.pop_scroll::-webkit-scrollbar {width: 1px; height: 1px;}
+.pop_scroll::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block; height: 10px; background:#fff}
+.pop_scroll::-webkit-scrollbar-track {background:#fff; -webkit-border-radius: 10px; border-radius:10px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0)}
+.pop_scroll::-webkit-scrollbar-thumb {height: 50px; width: 50px; background: rgba(0,0,0,0); -webkit-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0)}
+/* 팝업 */
+body.default{position: relative; overflow: hidden;}
+.layer_pop_widget{display:none; position: absolute; left: 0; top: 0; z-index: 100;
+	.layer_pop_bg{position: fixed; left: 0; top: 0; z-index: 100; width: 100%; height: 100%; background: rgba(0,0,0,0.5);}
+	.pop_widget{position: fixed; left: 50%; top: 50%; z-index: 200; background-color: #fff; transform: translate(-50%, -50%);
+		.pop_contents{text-align: center;
+			.contents_inner{padding: 200px;}
+			.popup_btn{position:absolute; top:20px; right:20px;}
+		}
+	}
+}
+

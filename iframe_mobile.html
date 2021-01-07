@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	</head>
+	<body style="margin:0px;">
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myframe");
+				var y = (x.contentWindow || x.contentDocument);
+				console.log(y);
+				if (y.document)y = y.document;
+				var iframeHeight = $('#myframe').contents().find('html').height();
+				$('#myframe').height(iframeHeight + 20);
+			}
+			$(window).resize(function() {
+				myFunction();
+			});
+		</script>
+		<div style="height:150px; line-height:150px; background:red; text-align:center; color:#fff;">테스트</div>
+		<iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" id="myframe" src="http://218.232.122.45:8080/popup/iframe/mobile/main.html" onload="myFunction();" style="width:100%; height:2000px; border:0px; display:block;"></iframe>
+		<div style="height:150px; line-height:150px; background:blue; text-align:center; color:#fff;">테스트</div>
+	</body>
+<!--
+	<script type="text/javascript" src="js/iframeResizer.contentWindow.min.js"></script>
+	<script type="text/javascript" src="js/iframeResizer.min.js"></script> -->
+</html>
